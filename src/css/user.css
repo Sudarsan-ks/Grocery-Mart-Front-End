@@ -1,0 +1,257 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    color: #333;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+.register {
+    width: 100%;
+    height: 100vh;
+    background-image: url("../assets/registerImg.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.register-form {
+    width: 100%;
+    max-width: 500px;
+    height: 600px;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 2rem;
+}
+
+.registerbtn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.registerheading {
+    color: blueviolet;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.passwordIcon {
+    position: relative;
+}
+
+.passwordIcon i {
+    position: absolute;
+    right: 2%;
+    top: 65%;
+    color: black;
+}
+
+.login {
+    width: 100%;
+    height: 100vh;
+    background-image: url("../assets/loginImg.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-form {
+    color: yellow;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgb(204, 197, 197);
+}
+
+.login-form p {
+    color: aqua;
+    font-weight: 600;
+}
+
+.login-form span {
+    color: rgb(138, 219, 17);
+    font-weight: 900;
+}
+
+
+.forgotpasslink {
+    display: flex;
+    justify-content: end;
+    margin-bottom: 0.5rem;
+}
+
+.loginbtn {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 0.5rem;
+    margin-top: 0.5rem;
+}
+
+
+.registerlink {
+    color: greenyellow;
+    display: flex;
+    justify-content: center;
+}
+
+.otpverify {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: burlywood;
+}
+
+.otpverify-form {
+    max-width: 300px;
+    background-color: #1a9b9b;
+    padding: 1.5rem;
+    border-radius: 15px;
+    box-shadow: 2px 3px 15px rgb(65, 62, 62);
+}
+
+.otpverify-form p b {
+    cursor: pointer;
+    color: rgb(242, 255, 0);
+}
+
+.lotpverifybtn {
+    display: flex;
+    justify-content: center;
+}
+
+.lotpverifybtn Button {
+    color: rgb(244, 235, 235);
+    background-color: brown;
+}
+
+.forgot {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(229, 137, 24);
+}
+
+.fotgot-form,
+.reset-form {
+    background-color: #f0f0f0;
+    padding: 1.5rem;
+    border: 2px solid black;
+    border-radius: 10px;
+    box-shadow: 0 0 10px white;
+}
+
+.form-group,
+.forgotbtn,
+.resetGroup,
+.resetpassbtn {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.reset {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(201, 238, 19);
+}
+
+@media screen and (max-width: 768px) {
+
+    .register-form,
+    .login-form {
+        width: 90%;
+        max-width: 400px;
+        height: auto;
+    }
+
+    .register .register-form,
+    .login .login-form {
+        padding: 15px;
+    }
+
+    .register-form {
+        max-width: 400px;
+    }
+
+    .otpverify-form {
+        max-width: 280px;
+        padding: 1.2rem;
+    }
+
+    .forgot .fotgot-form,
+    .reset .reset-form {
+        padding: 1rem;
+        width: 90%;
+        max-width: 350px;
+    }
+
+    .login-form p,
+    .otpverify-form p b {
+        font-size: 0.9rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+
+    .register-form,
+    .login-form,
+    .otpverify-form,
+    .fotgot-form,
+    .reset-form {
+        width: 95%;
+        padding: 1rem;
+    }
+
+    .register .register-form,
+    .login .login-form,
+    .forgot .fotgot-form,
+    .reset .reset-form {
+        height: auto;
+    }
+
+    .registerheading {
+        font-size: 1.2rem;
+    }
+
+    .passwordIcon i {
+        top: 60%;
+    }
+
+    .login-form p,
+    .otpverify-form p b {
+        font-size: 0.8rem;
+    }
+
+    .forgotpasslink,
+    .loginbtn,
+    .registerlink {
+        font-size: 0.8rem;
+    }
+}

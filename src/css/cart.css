@@ -1,0 +1,546 @@
+.cart {
+  width: 100%;
+  height: auto;
+  min-height: 100vh;
+  padding: 10px;
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+.cart h3 {
+  text-align: center;
+  background-color: #555;
+  color: aliceblue;
+  margin-bottom: 1.5rem;
+}
+
+.cartItems {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.itemCard {
+  width: 95%;
+  max-width: 60%;
+  height: 200px;
+  display: flex;
+  flex-direction: row;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.cardImage img {
+  width: 200px;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.cardDetails {
+  width: 100%;
+  display: flex;
+  margin-left: 20px;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.cardName {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.cardPrice {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+.cardPrice span {
+  color: brown;
+}
+
+.cardQuantity {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.cardQuantity button {
+  width: 35px;
+  padding: 5px 10px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #fff;
+  background-color: #007bff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.cardQuantity button:hover {
+  background-color: #0056b3;
+}
+
+.numberValue {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.remove button {
+  cursor: pointer;
+  padding: 5px 10px;
+  background-color: red;
+  color: white;
+  border: none;
+  transition: background-color 0.3s ease;
+}
+
+.remove button:hover {
+  background-color: rgb(151, 34, 34);
+}
+
+
+.totalprice {
+  width: 90%;
+  max-width: 500px;
+  margin: 20px auto;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  color: white;
+  padding: 15px;
+  background: linear-gradient(135deg, #28a745, #8bc34a);
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.totalprice h4 {
+  font-size: 18px;
+  font-weight: 600;
+  margin: 0;
+}
+
+.totalprice h4 span b {
+  font-size: 20px;
+  color: black;
+}
+
+.totalprice button {
+  cursor: pointer;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  color: white;
+  background: #007bff;
+  border: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.totalprice button:hover {
+  background: #0056b3;
+  transform: scale(1.05);
+}
+
+.totalprice button:active {
+  transform: scale(0.95);
+}
+
+.payment {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(226, 136, 19);
+}
+
+.paymentCard {
+  width: 90%;
+  max-width: 450px;
+  padding: 1rem;
+  text-align: left;
+  background-color: rgb(241, 241, 241);
+  border: 2px solid black;
+  border-radius: 15px;
+  box-shadow: 0px 5px 15px black;
+}
+
+.paymentCard h3 {
+  text-align: center;
+}
+
+.street,
+.cityState,
+.ZipCountry {
+  display: flex;
+  justify-content: start;
+  gap: 10px;
+  margin-bottom: 1rem;
+}
+
+.street input,
+.cityState input,
+.ZipCountry input {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.street label,
+.cityState label,
+.ZipCountry label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.price {
+  margin-top: 1.5rem;
+  text-align: center;
+}
+
+.changeaddress {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(124, 120, 114);
+}
+
+.changeadd {
+  display: flex;
+  justify-content: center;
+}
+
+.updateaddress {
+  text-align: center;
+  background-color: #0056b3;
+  color: #fff;
+  padding: 0.3rem;
+  border: none;
+  border-radius: 10px;
+}
+
+
+.payButton {
+  display: block;
+  width: 100%;
+  padding: 0.75rem;
+  font-size: 1rem;
+  color: white;
+  background-color: rgb(22, 163, 74);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 1rem;
+}
+
+.payButton:disabled {
+  background-color: gray;
+  cursor: not-allowed;
+}
+
+.order {
+  width: 100%;
+  height: auto;
+  background-color: azure;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.address {
+  width: 90%;
+  height: auto;
+  min-height: 70px;
+  background-color: purple;
+  color: #fff;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  padding: 1rem;
+  border-radius: 20px;
+  margin-bottom: 1.5rem;
+}
+
+.address p {
+  margin: 0;
+}
+
+.adminorders,
+.userorders {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.orders {
+  width: 90%;
+  height: auto;
+  max-width: 700px;
+  background-color: darkseagreen;
+  padding: 1rem;
+  border: 2px solid yellow;
+  border-radius: 15px;
+  box-shadow: 0px 5px 10px black;
+  font-size: 1rem;
+}
+
+.dateAmount {
+  display: flex;
+  justify-content: space-between;
+}
+
+.statusbtn {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.selectbox {
+  cursor: pointer;
+  font-size: 1.5rem;
+  border-radius: 5px;
+  border: 2px solid black;
+}
+
+.statusbtn p {
+  background-color: green;
+  padding: 1rem;
+  color: bisque;
+}
+
+.deletelbtn {
+  display: flex;
+  justify-content: space-between;
+}
+
+
+.deletelbtn button {
+  cursor: pointer;
+  border: none;
+  padding: 5px;
+  border-radius: 10px;
+  background-color: yellow;
+  transition: background-color 0.3s ease;
+}
+
+.deletelbtn button:hover {
+  background-color: green;
+  font-size: 1rem;
+  color: white;
+}
+
+.deletelbtn i {
+  cursor: pointer;
+  color: red;
+}
+
+.orderdetail {
+  width: 100%;
+  height: auto;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  background-color: #dfeae1;
+  margin-bottom: 1rem;
+  padding: 1rem;
+}
+
+.detailsCard {
+  width: 95%;
+  height: auto;
+  max-width: 500px;
+  padding: 15px;
+  background-color: #92a728;
+  border: 2px solid black;
+  border-radius: 20px;
+  box-shadow: 0px 5px 20px gold;
+  text-align: center;
+}
+
+.orderstatus {
+  padding-bottom: 1rem;
+  border-bottom: 2px solid black;
+}
+
+.itemdetails {
+  width: 100%;
+  height: auto;
+  max-height: 300px;
+  overflow-y: auto;
+  padding: 1rem;
+}
+
+.itemdetails h5 {
+  color: rgb(215, 11, 11);
+  padding-bottom: 1rem;
+  border-bottom: 2px solid black;
+}
+
+.itemdetailsCard {
+  width: 100%;
+  height: auto;
+  padding: 10px;
+  background-color: blueviolet;
+  color: white;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  border: 2px solid blueviolet;
+  border-radius: 10px;
+  box-shadow: 0px 3px 15px white;
+}
+
+
+@media (max-width: 768px) {
+  .cart {
+    padding: 5px;
+  }
+
+  .itemCard {
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+    max-width: 90%;
+    padding: 10px;
+  }
+
+  .cardImage img {
+    width: 100%;
+    max-width: 150px;
+    height: auto;
+  }
+
+  .cardDetails {
+    width: 100%;
+    flex-direction: column;
+    margin-left: 0;
+    align-items: center;
+  }
+
+  .cardName,
+  .cardPrice {
+    font-size: 14px;
+    text-align: center;
+  }
+
+  .cardQuantity {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .cardQuantity button {
+    padding: 5px 8px;
+    font-size: 14px;
+  }
+
+  .remove button {
+    margin-top: 8px;
+    font-size: 12px;
+    padding: 4px 6px;
+  }
+
+  .totalprice {
+    width: 95%;
+    padding: 10px;
+    font-size: 14px;
+  }
+
+  .totalprice h4 {
+    font-size: 14px;
+  }
+
+  .totalprice button {
+    font-size: 14px;
+    padding: 8px 12px;
+  }
+
+  .detailsCard {
+    width: 100%; 
+    max-width: none; 
+    padding: 10px; 
+  }
+
+  .itemdetails {
+    padding: 0.5rem; 
+  }
+
+  .itemdetailsCard {
+    padding: 8px; 
+    font-size: 0.9rem; 
+    box-shadow: 0px 2px 10px white; 
+  }
+}
+
+@media (max-width: 576px) {
+  .cartItems {
+    gap: 8px;
+  }
+
+  .itemCard {
+    max-width: 100%;
+    padding: 8px;
+  }
+
+  .cardImage img {
+    max-width: 120px;
+  }
+
+  .cardDetails {
+    text-align: center;
+    font-size: 12px;
+  }
+
+  .cardName,
+  .cardPrice {
+    font-size: 12px;
+  }
+
+  .totalprice h4 span b {
+    font-size: 16px;
+  }
+
+  .payButton {
+    font-size: 14px;
+    padding: 8px;
+  }
+}
+
+@media (max-width: 480px) {
+  .detailsCard {
+    border-radius: 10px; 
+    padding: 8px;
+  }
+
+  .itemdetailsCard {
+    padding: 5px; 
+  }
+
+  .itemdetails h5 {
+    font-size: 1rem; 
+  }
+}

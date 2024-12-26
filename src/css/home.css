@@ -1,0 +1,644 @@
+.home {
+    width: 100%;
+    height: auto;
+    min-height: 100vh;
+    padding: 1rem;
+}
+
+.home-nav {
+    width: 100%;
+    height: auto;
+    padding: 1rem;
+    background-color: greenyellow;
+    color: black;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1rem; 
+}
+
+.siderbarIcon,
+.userIcon {
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.usernavigation {
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 0.5rem;
+    gap: 1.5rem;
+}
+
+.userprofile {
+    position: absolute;
+    width: 150px;
+    top: 40px;
+    right: 10px;
+    background-color: white;
+    border: 1px solid #ccc;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+    z-index: 101;
+    opacity: 0;
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+.userprofile.open {
+    opacity: 1;
+    transform: scaleY(1);
+}
+
+.userprofile.close {
+    opacity: 0;
+    transform: scaleY(0);
+}
+
+.userprofile ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.userprofile ul li {
+    padding: 0.5rem 0.3rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.userprofile ul li i {
+    margin-right: 0.5rem;
+    font-size: 1.2rem;
+    background-color: rgb(55, 214, 55);
+    padding: 0.2rem;
+    border-radius: 50%;
+}
+
+.userprofile ul li:hover {
+    background-color: #f0f0f0;
+    padding-left: 0.6rem;
+    transition: padding-left 0.2s;
+}
+
+.home-search {
+    width: 100%;
+    height: 70px;
+    position: sticky;
+    top: 2%;
+    background-color: aqua;
+    display: flex;
+    justify-content: space-between;
+    z-index: 100;
+}
+
+.grocery-logo img {
+    width: auto;
+    max-width: 100px;
+    height: 100%;
+    object-fit: contain;
+}
+
+.search-bar {
+    width: 100%;
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.3rem;
+    padding: 0.3rem;
+}
+
+.search-bar input {
+    width: 100%;
+    border-radius: 20px;
+    border: 1px solid black;
+    padding: 0.5rem;
+    font-size: 0.9rem;
+}
+
+.nav-cart {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cartIcon {
+    font-size: 1.8rem;
+    cursor: pointer;
+}
+
+.cartIcon:hover {
+    font-size: 2rem;
+}
+
+.nav-cart p {
+    color: red;
+    font-size: 1.3rem;
+    font-weight: 800;
+}
+
+.sidebar {
+    position: fixed;
+    top: 10;
+    left: 0;
+    width: 70%;
+    height: 100%;
+    background-color: #333;
+    color: white;
+    padding-top: 60px;
+    transition: transform 0.3s ease;
+    transform: translateX(-100%);
+    z-index: 101;
+}
+
+.sidebar.open {
+    transform: translateX(0);
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    padding: 1rem;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    text-align: center;
+}
+
+.sidebar ul li:hover {
+    background-color: #cccccc;
+}
+
+.sidebar ul li i {
+    margin-right: 0.5rem;
+}
+
+.sidebar.close {
+    transform: translateX(-100%);
+}
+
+.back-button {
+    display: flex;
+    justify-content: end;
+}
+
+.back-button i {
+    font-size: 2rem;
+    margin-right: 1rem;
+    cursor: pointer;
+}
+
+.grocery-category {
+    background-color: brown;
+    padding: 0.5rem;
+}
+
+.category-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.categories {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0.3rem;
+}
+
+.category-card {
+    background-color: rgb(219, 222, 19);
+    cursor: pointer;
+    border-radius: 10px;
+    box-shadow: 0px 0px 5px rgb(13, 12, 12);
+}
+
+.category-card p:hover {
+    font-size: 1.5rem;
+}
+
+.category-card p {
+    color: black;
+    text-align: center;
+    margin: 0;
+    padding: 0.3rem;
+}
+
+.home-display {
+    width: 100%;
+    background-color: #E8F5E9;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+    gap: 1rem;
+    padding: 2rem;
+}
+
+.card {
+    width: 100%;
+    max-width: 300px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 1rem;
+    transition: transform 0.3s;
+}
+
+.product-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.card-details {
+    padding: 1rem;
+}
+
+.card-details h3 {
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+.card-details p {
+    margin: 0.3rem 0;
+}
+
+.card-details p:nth-child(5) {
+    color: violet;
+}
+
+.card-details p span {
+    color: green;
+}
+
+.card-button {
+    text-align: center;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.card-button button {
+    background-color: #28a745;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.card-button button:hover {
+    background-color: #218838;
+    transform: scale(1.05);
+}
+
+.card-button button:active {
+    transform: scale(0.98);
+}
+
+.card-button button:focus {
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.editButton {
+    display: flex;
+    justify-content: end;
+    padding: 1rem;
+}
+
+.editIcon {
+    font-size: 1rem;
+    color: rgb(241, 14, 241);
+    cursor: pointer;
+}
+
+.editGrocery {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: burlywood;
+}
+
+.edit-card {
+    width: 90%;
+    max-width: 450px;
+    background-color: aquamarine;
+    padding: 1rem;
+    border-radius: 15px;
+    box-shadow: 0px 3px 15px red;
+}
+
+.edit-card h1 {
+    text-align: center;
+    color: violet;
+    text-decoration: underline;
+}
+
+.editCardBtn {
+    text-align: center;
+}
+
+.unauthorised,
+.error {
+    width: 100%;
+    height: 100vh;
+}
+
+.unauthorised img,
+.error img {
+    width: 100%;
+    height: 100vh;
+    object-fit: contain;
+}
+
+.profilePage {
+    width: 100%;
+    height: auto;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #28a745;
+}
+
+.profile-card {
+    width: 90%;
+    max-width: 90%;
+    background-color: #E8F5E9;
+    height: auto;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 2px 20px rgb(10, 10, 9);
+}
+
+.profileImg {
+    width: 100%;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 2px solid yellowgreen;
+    margin-bottom: 1rem;
+}
+
+.profileImg i {
+    font-size: 100px;
+    color: rgb(144, 195, 67);
+}
+
+.profile-card p {
+    margin-bottom: 1.5rem;
+    font-size: large;
+}
+
+.profile-card span {
+    margin-left: 0.5rem;
+    color: rgb(144, 195, 67);
+    font-size: large;
+}
+
+.profile-btn {
+    display: flex;
+    justify-content: center;
+}
+
+.profile-btn button {
+    width: 100px;
+    border: none;
+    background-color: #333;
+    color: #f0f0f0;
+}
+
+.profile-btn button:hover {
+    width: 110px;
+    background-color: #28a745;
+}
+
+.setting {
+    width: 100%;
+    height: auto;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #bfb1b1;
+}
+
+.settingCard {
+    width: 90%;
+    max-width: 300px;
+    background-color: rgb(237, 150, 9);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 3px 13px black;
+}
+
+.settingCard h3 {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.account,
+.language,
+.notification {
+    margin-bottom: 20px;
+}
+
+#dropdown-basic {
+    width: 100%;
+    padding: 3px;
+}
+
+.accountDropdown {
+    width: 100%;
+    padding: 3px;
+}
+
+.language select {
+    width: 100%;
+    padding: 5px;
+    margin-top: 8px;
+}
+
+.notification label {
+    display: flex;
+    align-items: center;
+}
+
+.notification input {
+    margin-right: 10px;
+}
+
+.adminDash {
+    width: 100%;
+    height: auto;
+    min-height: 100vh;
+    background-color: aquamarine;
+    display: flex;
+    flex-direction: row;
+}
+
+.addProduct {
+    width: 40%;
+    height: 100vh;
+    padding: 2rem;
+}
+
+.addproduct-card {
+    max-width: 420px;
+    width: 90%;
+    background-color: rgb(217, 227, 224);
+    padding: 1rem;
+    border-radius: 15px;
+    border: 2px solid black;
+    box-shadow: 0px 3px 15px rgb(83, 81, 81);
+}
+
+.addproduct-card h1 {
+    text-align: center;
+    color: rgb(228, 29, 149);
+    margin-top: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.addproductBtn {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.addproductBtn Button {
+    font-size: 1.5rem;
+    padding: 1rem;
+    border-radius: 25px;
+    box-shadow: 0px 5px 15px rgb(92, 69, 69);
+}
+
+.details {
+    width: 60%;
+    height: auto;
+    padding: 2rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+}
+
+.details-card {
+    height: 220px;
+    padding: 1rem;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 20px;
+    border: 3px solid black;
+    box-shadow: 1px 5px 12px black;
+}
+
+.details-card h3 {
+    color: yellowgreen;
+}
+
+.details-card p {
+    font-size: 5rem;
+    color: red;
+}
+
+.userdash {
+    width: 100%;
+    height: auto;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    background-color: #bfb1b1;
+}
+
+.userDetails {
+    width: 100%;
+    height: 100vh;
+    padding: 2rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+}
+
+@media screen and (max-width: 768px) {
+    .sidebar {
+        width: 70%; 
+        transform: translateX(-100%);
+    }
+
+    .userprofile {
+        width: 150px; 
+        right: 10px; 
+        transform: scaleY(1);
+    }
+
+    .usernavigation {
+        gap: 1rem; 
+        padding: 0.5rem;
+    }
+
+    .categories {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .home-display {
+        grid-template-columns: repeat(2, 1fr); 
+    }
+
+    .card {
+        max-width: 100%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .home-nav {
+        flex-direction: row;
+        padding: 0.5rem;
+    }
+
+    .usernavigation {
+        flex-direction: column; 
+        gap: 0.5rem;
+    }
+
+    .userprofile {
+        top: 40px; 
+        width: 150;
+    }
+
+    .search-bar {
+        flex-direction: column;
+    }
+
+    .categories {
+        grid-template-columns: 1fr; 
+    }
+
+    .home-display {
+        grid-template-columns: 1fr;
+    }
+
+    .card {
+        max-width: 90%;
+    }
+
+    .profile-card {
+        padding: 1rem;
+    }
+}
