@@ -309,6 +309,10 @@
   font-size: 1rem;
 }
 
+.userName{
+  text-align: center;
+}
+
 .dateAmount {
   display: flex;
   justify-content: space-between;
