@@ -36,7 +36,7 @@ export function Register() {
       navigate("/otpverify")
     } catch (error) {
       console.error('Error registering user:', error);
-      alert('Error during registration');
+      alert('User Already Exist');
     }
     finally {
       setLoading(false)
