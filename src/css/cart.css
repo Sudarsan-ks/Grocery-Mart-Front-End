@@ -258,6 +258,7 @@
 .order {
   width: 100%;
   height: auto;
+  min-height: 100vh;
   background-color: azure;
   display: flex;
   flex-direction: column;
