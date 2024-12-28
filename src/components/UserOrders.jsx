@@ -49,33 +49,39 @@ export function UserOrders() {
     <div className='order'>
       <h1>YOUR ORDER'S</h1>
       <div className="address">
-        <p>{address.street},</p>
-        <p>{address.city},</p>
-        <p>{address.state},</p>
-        <p>{address.country},</p>
-        <p>{address.zip}</p>
+        {
+          address ? (<>
+            <p>{address.street},</p>
+            <p>{address.city},</p>
+            <p>{address.state},</p>
+            <p>{address.country},</p>
+            <p>{address.zip}</p>
+          </>) : (
+            <p>No Address Available</p>
+          )
+        }
       </div>
       <div className="adminorders">
         {
-          order.map((res) => {
-            return (
-              <div className="orders" key={res?._id}>
-                <div className="dateAmount">
-                  <p>Order Date: <b>{new Date(res?.orderDate).toLocaleDateString()}</b> </p>
-                  <p>Total Price: <b>{res?.totalAmount}</b></p>
-                </div>
-                <div className="statusbtn">
-                  <p style={{ backgroundColor: res?.status === "Pending" ? "red" : "green" }} ><b>{res?.status}</b></p>
-                </div>
-                <div className="deletelbtn">
-                  <button onClick={() => navigate("/orderdetails", { state: { orderID: res?._id } })} >More Details </button>
-                  {
-                    (res?.status === "Delivered") && <i onClick={() => handleDelete(res?._id)} className="fa fa-trash" aria-hidden="true"></i>
-                  }
-                </div>
+          order.length > 0 ? (order.map((res) =>
+          (
+            <div className="orders" key={res?._id}>
+              <div className="dateAmount">
+                <p>Order Date: <b>{new Date(res?.orderDate).toLocaleDateString()}</b> </p>
+                <p>Total Price: <b>{res?.totalAmount}</b></p>
               </div>
-            )
-          })
+              <div className="statusbtn">
+                <p style={{ backgroundColor: res?.status === "Pending" ? "red" : "green" }} ><b>{res?.status}</b></p>
+              </div>
+              <div className="deletelbtn">
+                <button onClick={() => navigate("/orderdetails", { state: { orderID: res?._id } })} >More Details </button>
+                {
+                  (res?.status === "Delivered") && <i onClick={() => handleDelete(res?._id)} className="fa fa-trash" aria-hidden="true"></i>
+                }
+              </div>
+            </div>
+          )
+          )) : (<p className='noOrder' ><b>No Orders Available</b></p>)
         }
       </div>
     </div>
