@@ -76,7 +76,7 @@ export function AdminOrders() {
           order.length > 0 ? (order.map((res) =>
           (
             <div className="orders" key={res?._id}>
-              <div className="userName"><b>{user?.name}</b></div>
+              <div className="userName"><b>{res?.user?.name}</b></div>
               <div className="dateAmount">
                 <p>Order Date: <b>{new Date(res?.orderDate).toLocaleDateString()}</b> </p>
                 <p>Total Price: <b>{res?.totalAmount}</b></p>
