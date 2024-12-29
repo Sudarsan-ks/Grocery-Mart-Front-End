@@ -58,7 +58,7 @@ export function Payment() {
             const response = await axios.post(`${API}/order/payment`, { userID })
             const { orderId, amount, currency } = response.data
             const options = {
-                key: import.meta.env.RAZORPAY_KEY_ID,
+                key: import.meta.env.VITE_RAZORPAY_KEY_ID,
                 amount: amount,
                 currency: currency,
                 name: "Grocery Mart",
