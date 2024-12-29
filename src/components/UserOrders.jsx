@@ -61,6 +61,7 @@ export function UserOrders() {
           )
         }
       </div>
+      <p className='backhome' onClick={()=>navigate("/home")} >Back to <i className="fa fa-backward" aria-hidden="true"></i> <b>HOME PAGE</b></p>
       <div className="adminorders">
         {
           order.length > 0 ? (order.map((res) =>

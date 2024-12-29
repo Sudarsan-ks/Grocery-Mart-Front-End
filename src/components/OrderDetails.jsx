@@ -1,12 +1,13 @@
 import axios from 'axios'
 import React, { useEffect } from 'react'
-import { useLocation } from 'react-router-dom'
+import { useLocation, useNavigate } from 'react-router-dom'
 import { API } from '../global'
 import { useState } from 'react'
 
 export function OrderDetails() {
 
     const location = useLocation()
+    const navigate = useNavigate()
     const { orderID } = location.state || ""
     const [orderdetail, setOrderdetail] = useState(null);
 
@@ -25,6 +26,7 @@ export function OrderDetails() {
     return (
         <div className='orderdetail' >
             <h4>ORDER DETAIL'S</h4>
+            <p className='backhome' onClick={()=>navigate("/home")} >Back to <i className="fa fa-backward" aria-hidden="true"></i> <b>HOME PAGE</b></p>
                 {
                     orderdetail ? (
                         <div className='detailsCard' >
