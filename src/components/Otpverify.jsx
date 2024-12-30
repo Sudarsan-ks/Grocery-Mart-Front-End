@@ -22,7 +22,7 @@ export function Otpverify() {
   const handleOtpVerify = async (e) => {
     e.preventDefault();
     try {
-     await axios.post(`${API}/user/verifyOtp`, otpdata)
+      await axios.post(`${API}/user/verifyOtp`, otpdata)
       alert("Account acctivated successfully")
       navigate("/")
     } catch (error) {
@@ -35,7 +35,7 @@ export function Otpverify() {
   const handleResend = async () => {
     const email = prompt("Enter your Registered Email")
     try {
-       await axios.post(`${API}/user/resendOtp`, {email})
+      await axios.post(`${API}/user/resendOtp`, { email })
       alert("OTP Sended to Registered Email ID")
     } catch (error) {
       alert("Please Enter Your Registered Email ID")

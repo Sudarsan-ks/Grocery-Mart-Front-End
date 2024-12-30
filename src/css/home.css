@@ -16,7 +16,7 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    padding: 0 1rem; 
+    padding: 0 1rem;
 }
 
 .siderbarIcon,
@@ -240,7 +240,7 @@
     width: 100%;
     background-color: #E8F5E9;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 1rem;
     padding: 2rem;
 }
@@ -578,18 +578,18 @@
 
 @media screen and (max-width: 768px) {
     .sidebar {
-        width: 70%; 
+        width: 70%;
         transform: translateX(-100%);
     }
 
     .userprofile {
-        width: 150px; 
-        right: 10px; 
+        width: 150px;
+        right: 10px;
         transform: scaleY(1);
     }
 
     .usernavigation {
-        gap: 1rem; 
+        gap: 1rem;
         padding: 0.5rem;
     }
 
@@ -598,7 +598,7 @@
     }
 
     .home-display {
-        grid-template-columns: repeat(2, 1fr); 
+        grid-template-columns: repeat(2, 1fr);
     }
 
     .card {
@@ -613,12 +613,12 @@
     }
 
     .usernavigation {
-        flex-direction: column; 
+        flex-direction: column;
         gap: 0.5rem;
     }
 
     .userprofile {
-        top: 40px; 
+        top: 40px;
         width: 150;
     }
 
@@ -627,7 +627,7 @@
     }
 
     .categories {
-        grid-template-columns: 1fr; 
+        grid-template-columns: 1fr;
     }
 
     .home-display {

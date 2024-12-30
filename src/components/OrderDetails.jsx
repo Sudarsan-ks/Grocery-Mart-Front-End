@@ -26,28 +26,28 @@ export function OrderDetails() {
     return (
         <div className='orderdetail' >
             <h4>ORDER DETAIL'S</h4>
-            <p className='backhome' onClick={()=>navigate("/home")} >Back to <i className="fa fa-backward" aria-hidden="true"></i> <b>HOME PAGE</b></p>
-                {
-                    orderdetail ? (
-                        <div className='detailsCard' >
-                            <p>Order Date: <b>{new Date(orderdetail.orderDate).toLocaleDateString()}</b></p>
-                            <p>Total Amount: <b>{orderdetail.totalAmount}</b></p>
-                            <p className='orderstatus' >Status: <b>{orderdetail.status}</b></p>
-                            <div className='itemdetails' >
-                                <h5><b>ITEM DETAIL'S</b></h5>
-                                {orderdetail?.items?.map((item, index) => (
-                                    <div className='itemdetailsCard' key={index}>
-                                        <p>Product: <b>{item?.product?.name}</b></p>
-                                        <p>Quantity: <b>{item.quantity}</b></p>
-                                        <p>Price: <b>{item.price}</b></p>
-                                    </div>
-                                ))}
-                            </div>
+            <p className='backhome' onClick={() => navigate("/home")} >Back to <i className="fa fa-backward" aria-hidden="true"></i> <b>HOME PAGE</b></p>
+            {
+                orderdetail ? (
+                    <div className='detailsCard' >
+                        <p>Order Date: <b>{new Date(orderdetail.orderDate).toLocaleDateString()}</b></p>
+                        <p>Total Amount: <b>{orderdetail.totalAmount}</b></p>
+                        <p className='orderstatus' >Status: <b>{orderdetail.status}</b></p>
+                        <div className='itemdetails' >
+                            <h5><b>ITEM DETAIL'S</b></h5>
+                            {orderdetail?.items?.map((item, index) => (
+                                <div className='itemdetailsCard' key={index}>
+                                    <p>Product: <b>{item?.product?.name}</b></p>
+                                    <p>Quantity: <b>{item.quantity}</b></p>
+                                    <p>Price: <b>{item.price}</b></p>
+                                </div>
+                            ))}
                         </div>
-                    ) : (
-                        <p>...Loading</p>
-                    )
-                }
+                    </div>
+                ) : (
+                    <p>...Loading</p>
+                )
+            }
         </div>
     )
 }

@@ -13,7 +13,7 @@ export function EditGrocery() {
 
     const location = useLocation()
     const grocery = location.state.grocery
-    const navigate= useNavigate()
+    const navigate = useNavigate()
 
     const [formdata, setFormdata] = useState({
         name: grocery.name,

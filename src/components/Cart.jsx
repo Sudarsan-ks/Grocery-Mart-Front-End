@@ -62,7 +62,7 @@ export function Cart() {
   return (
     <div className="cart">
       <h3>WELCOME TO GROCERY CART</h3>
-      <p onClick={()=>navigate("/home")} >Back to <i className="fa fa-backward" aria-hidden="true"></i> <b>HOME PAGE</b></p>
+      <p onClick={() => navigate("/home")} >Back to <i className="fa fa-backward" aria-hidden="true"></i> <b>HOME PAGE</b></p>
       <div className="cartItems">
         {
           cartItem.length > 0 && cartItem.map((item) => (

@@ -12,7 +12,6 @@ export function UserOrders() {
   const navigate = useNavigate()
 
   useEffect(() => {
-    alert(`Please Update the Pending "ORDER STATUS"`)
     const getOrder = async () => {
       try {
         const response = await axios.get(`${API}/order/getOrder/${userID}`)
